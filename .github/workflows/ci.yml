@@ -1,0 +1,23 @@
+name: Tests and offline smoke benchmark
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pip install --no-deps -e .
+      - run: ruff check src tests
+      - run: pytest -q
+      - run: mlbench run --smoke --output results/ci-smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-evidence
+          path: results/ci-smoke

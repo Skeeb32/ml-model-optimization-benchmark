@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-model-optimization-benchmark"
+version = "0.1.0"
+description = "Reproducible CPU inference experiments for BERT-family masked language models"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.6,<2.16", "transformers>=4.48,<6", "numpy>=2,<3", "pandas>=2,<4", "matplotlib>=3.9,<4", "plotly>=6,<8", "PyYAML>=6,<7", "psutil>=6,<8", "huggingface-hub>=0.28,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+mlbench = "mlbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
