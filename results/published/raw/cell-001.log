@@ -1,0 +1,14 @@
+W1106 03:06:16.397000 93733 .venv/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 394/394 [00:00<00:00, 14729.58it/s]
+[transformers] [1mBertForMaskedLM LOAD REPORT[0m from: google-bert/bert-large-uncased
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+cls.seq_relationship.bias   | UNEXPECTED |  | 
+bert.pooler.dense.bias      | UNEXPECTED |  | 
+cls.seq_relationship.weight | UNEXPECTED |  | 
+bert.pooler.dense.weight    | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.

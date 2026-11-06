@@ -1,0 +1,21 @@
+seed: 42
+threads: 4
+warmup: 5
+iterations: 30
+trials: 3
+batch_sizes:
+- 1
+sequence_lengths:
+- 32
+precisions:
+- fp32
+- int8
+engine: auto
+models:
+- id: distilbert/distilbert-base-uncased
+  revision: 12040accade4e8a0f71eabdb258fecc2e7e948be
+- id: google-bert/bert-base-uncased
+  revision: 86b5e0934494bd15c9632b12f734a8a67f723594
+- id: google-bert/bert-large-uncased
+  revision: 6da4b6a26a1877e173fca3225479512db81a5e5b
+quality_corpus: data/quality_corpus.txt

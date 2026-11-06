@@ -18,6 +18,14 @@ This is a benchmark of encoder masked-language models, not a generative chatbot 
 
 See [measured findings](results/published/findings.md), [raw CSV](results/published/benchmark_results.csv), and [environment manifest](results/published/manifest.json).
 
+| Model | FP32 mean latency | INT8 mean latency | INT8 / FP32 throughput | State reduction |
+| --- | ---: | ---: | ---: | ---: |
+| distilbert-base-uncased | 20.62 ms | 23.35 ms | 0.88× | 39.4% |
+| bert-base-uncased | 34.37 ms | 38.70 ms | 0.89× | 53.2% |
+| bert-large-uncased | 116.92 ms | 94.12 ms | 1.24× | 65.5% |
+
+Measured on Apple M1 CPU, four threads, batch 1, sequence length 32, three process trials with 30 timed forwards each. Variability, quality changes and memory measurements are in the linked findings and raw data.
+
 ![Measured latency comparison](results/published/plots/latency_mean_ms.svg)
 
 The published run is an exploratory batch-1, sequence-length-32 comparison with three trials per model/precision. It is not the full workload matrix and does not establish general production performance. The 24-sentence quality probe is diagnostic, not a validated accuracy benchmark.

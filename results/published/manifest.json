@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-06T08:05:52.641839+00:00",
+  "run_type": "measured_pretrained",
+  "python": "3.14.3",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processor": "arm",
+  "physical_cores": 8,
+  "logical_cores": 8,
+  "ram_gib": 16.0,
+  "device": "cpu",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "psutil": "7.2.2",
+    "huggingface-hub": "2.4.0"
+  },
+  "source_commit": "6f053771051e902d813472b9e9dfcd349881378e",
+  "corpus_sha256": "8627b0e3c2f89ccc5a5100ceed62af81779475d9997439a0bdf05ee7a946cc23",
+  "config": {
+    "seed": 42,
+    "threads": 4,
+    "warmup": 5,
+    "iterations": 30,
+    "trials": 3,
+    "batch_sizes": [
+      1
+    ],
+    "sequence_lengths": [
+      32
+    ],
+    "precisions": [
+      "fp32",
+      "int8"
+    ],
+    "engine": "auto",
+    "models": [
+      {
+        "id": "distilbert/distilbert-base-uncased",
+        "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be"
+      },
+      {
+        "id": "google-bert/bert-base-uncased",
+        "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"
+      },
+      {
+        "id": "google-bert/bert-large-uncased",
+        "revision": "6da4b6a26a1877e173fca3225479512db81a5e5b"
+      }
+    ],
+    "quality_corpus": "data/quality_corpus.txt"
+  },
+  "quality_scope": "24 original sentences; diagnostic only",
+  "timing_scope": "warm forward-only masked-LM logits; synthetic token IDs; no tokenization",
+  "completed_utc": "2026-11-06T08:15:27.286198+00:00",
+  "failed_cells": 0,
+  "completed_cells": 18,
+  "source_files_sha256": {
+    "src/mlbench/worker.py": "ca0e37b4fba1814718c26db018a1ec2aad4a1089edff1ea1fe3766f11e60ec3a",
+    "src/mlbench/metrics.py": "000b9f9407f5642af0a9c9c6b7a629dcbde8f40a6613b943e8bb184832d6c4cf",
+    "src/mlbench/models.py": "7e5ac5ec7b3d2c4dcfa635af8a252d9b53debe40ec394243925c29f038af6dce",
+    "src/mlbench/quantization.py": "7959861dd6be44a5c4d81b9dba4cb317d2f7dfa339e94b1da3d0b06b06f90c0f",
+    "src/mlbench/__init__.py": "7418507a9690dcd97418d7a5f43d04f4a5b90297ed6a22a8bdbf0a141e3e6fb4",
+    "src/mlbench/cli.py": "8462452c7eed7f694cce275f01cf1ec9e9ef21d40485cbf42afa3e0364732916",
+    "src/mlbench/inference.py": "04ad19410d1567bd3e4c4d3a055e223753d014998eccaccc639f46e33e63eadc",
+    "src/mlbench/report.py": "8e10c40aab20f93006f05dc038cebf4d260c361c4514a5561531819d7886844e"
+  },
+  "source_verification": "Captured after run; every source module was verified byte-identical to the installed package used by workers.",
+  "cpu_brand": "Apple M1",
+  "conditions": "Exploratory workstation run; thermal state, power mode, and competing workload not controlled."
+}

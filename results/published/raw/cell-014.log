@@ -1,0 +1,18 @@
+W1106 03:14:58.160000 95670 .venv/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 394/394 [00:00<00:00, 18548.24it/s]
+[transformers] [1mBertForMaskedLM LOAD REPORT[0m from: google-bert/bert-large-uncased
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+cls.seq_relationship.bias   | UNEXPECTED |  | 
+bert.pooler.dense.weight    | UNEXPECTED |  | 
+cls.seq_relationship.weight | UNEXPECTED |  | 
+bert.pooler.dense.bias      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+<project>/.venv/lib/python3.14/site-packages/torch/ao/nn/quantized/modules/utils.py:72: UserWarning: torch.quantize_per_tensor, torch.quantize_per_channel and other quantized tensor creation functions that produce tensors with dtype torch.quint8, torch.qint8, and torch.qint32 are deprecated and will be removed in a future PyTorch release. Please see https://github.com/pytorch/pytorch/issues/184982 for more information. (Triggered internally at /Users/runner/work/pytorch/pytorch/aten/src/ATen/quantized/Quantizer.cpp:116.)
+  qweight = torch.quantize_per_tensor(
+<project>/.venv/lib/python3.14/site-packages/torch/_ops.py:1350: UserWarning: Currently, qnnpack incorrectly ignores reduce_range when it is set to true; this may change in a future release. (Triggered internally at /Users/runner/work/pytorch/pytorch/aten/src/ATen/native/quantized/cpu/qlinear_dynamic.cpp:251.)
+  return self._op(*args, **kwargs)
