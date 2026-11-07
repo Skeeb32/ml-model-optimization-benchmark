@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+<title id="title">Model Optimization Benchmark</title>
+<desc id="desc">Measure the trade-offs between FP32 and INT8 CPU inference. Three models, two precisions, eighteen published trials. Latency, memory, throughput and prediction quality.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#08131e"/><stop offset="1" stop-color="#122b36"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#a7f3d0"/></linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#a5c4d1" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="1280" height="440" rx="20" fill="url(#bg)"/>
+<rect width="1280" height="440" rx="20" fill="url(#grid)"/>
+<rect x="48" y="48" width="6" height="22" rx="3" fill="#5eead4"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="68" y="65" fill="#7dd3c4" font-size="15" letter-spacing="3">ML PERFORMANCE ENGINEERING</text>
+<text x="48" y="143" fill="#f1f5f9" font-size="52" font-weight="700" letter-spacing="-1.5">Model Optimization</text>
+<text x="48" y="207" fill="url(#accent)" font-size="64" font-weight="700" letter-spacing="-2">Benchmark</text>
+<text x="50" y="254" fill="#cedbe3" font-size="22">Measure the trade-off. Keep the evidence.</text>
+<text x="50" y="292" fill="#8fa9b9" font-size="16">PyTorch · Hugging Face · CPU FP32 / dynamic INT8</text>
+<path d="M48 326H718" stroke="#294452"/>
+<text x="50" y="364" fill="#f1f5f9" font-size="24" font-weight="700">3 models</text>
+<text x="234" y="364" fill="#f1f5f9" font-size="24" font-weight="700">2 precisions</text>
+<text x="460" y="364" fill="#f1f5f9" font-size="24" font-weight="700">18 trials</text>
+<text x="50" y="391" fill="#8fa9b9" font-size="13">DistilBERT · BERT Base · BERT Large</text>
+<text x="460" y="391" fill="#8fa9b9" font-size="13">Published CPU measurements</text>
+<rect x="786" y="64" width="438" height="314" rx="16" fill="#0a1923" stroke="#294452"/>
+<text x="814" y="100" fill="#8fa9b9" font-size="12" letter-spacing="2">THE EXPERIMENT</text>
+<rect x="814" y="120" width="163" height="60" rx="8" fill="#243849"/>
+<text x="895" y="158" fill="#e2e8f0" font-size="25" text-anchor="middle" font-weight="700">FP32</text>
+<path d="M990 150H1022m-8-8 8 8-8 8" fill="none" stroke="#8fa9b9" stroke-width="2"/>
+<rect x="1034" y="120" width="163" height="60" rx="8" fill="#103c3a" stroke="#357d70"/>
+<text x="1115" y="158" fill="#5eead4" font-size="25" text-anchor="middle" font-weight="700">INT8</text>
+<path d="M814 204H1197" stroke="#294452"/>
+<g font-size="16" fill="#d2e0e8">
+<circle cx="824" cy="232" r="4" fill="#5eead4"/><text x="840" y="238">Latency distributions</text>
+<circle cx="824" cy="267" r="4" fill="#5eead4"/><text x="840" y="273">Memory + model state</text>
+<circle cx="824" cy="302" r="4" fill="#5eead4"/><text x="840" y="308">Throughput</text>
+<circle cx="824" cy="337" r="4" fill="#fbbf24"/><text x="840" y="343">Prediction-quality trade-offs</text>
+</g></g></svg>
